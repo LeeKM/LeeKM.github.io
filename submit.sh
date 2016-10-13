@@ -3,7 +3,12 @@ if [ !CMMSG ];then
   CMMSG="auto"
 fi
 
-export COMMIT_CMD='git commit -m'+$CMMSG
+echo "commit message " ${CMMSG}
+
+export COMMIT_CMD="git commit -m "${CMMSG}
+
+echo "git status"
+git status
 
 echo "git add ."
 git add .
