@@ -28,8 +28,12 @@
     }
 
     function alipayFix() {
-      window.open("http://www.taobao.com");
       window.open("example://gizmos?action=test");
+      setTimeout("gotoH5Pay()", 3000);
+    }
+
+    function gotoH5Pay() {
+      window.open("http://www.taobao.com");
     }
 
     $(document).ready(open_win)
