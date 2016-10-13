@@ -1,11 +1,13 @@
+#!/bin/bash
+
 export CMMSG=$1
-if [ !CMMSG ];then
+if [ ! -n $CMMSG ];then
   CMMSG="auto"
 fi
 
 echo "commit message " ${CMMSG}
 
-export COMMIT_CMD="git commit -m "${CMMSG}
+export COMMIT_CMD="git commit -m \""${CMMSG}"\""
 
 echo "git status"
 git status
