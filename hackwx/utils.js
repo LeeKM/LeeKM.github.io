@@ -12,7 +12,7 @@ function is_weixn() {
 
 // 非微信内置浏览器，直接跳h5支付
 function toh5Pay() {
-  window.open(' https://mclient.alipay.com/cashier/mobilepay.htm?alipay_exterface_invoke_assign_target=invoke_efe3e8c96f2907902577e845e57ca239&alipay_exterface_invoke_assign_sign=_wi_o%2B_g_vu_il1_l%2B_y_fk43_i_r_eo_m_ow_hv_yx_c2_yled62_k_za_ub_j%2F0_c_n_q_ok5xr_kw%3D%3D');
+  window.open('https://mclient.alipay.com/cashier/mobilepay.htm?alipay_exterface_invoke_assign_target=invoke_a88052cbaaf2e888a670f904bfb4e925&alipay_exterface_invoke_assign_sign=_qc2_n%2F_hxa%2B0z_otdk_k_c_p_z_j_sdzru%2B_n_p_n%2B_yko_he7x_rktt1_vc%2B0f_zt_x_u_ssw%3D%3D');
 }
 
 // 绑定window.onLoad事件
