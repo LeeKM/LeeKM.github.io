@@ -2,7 +2,7 @@
 <head>
   <meta charset='UTF-8'>
   <title>吱口令Demo</title>
-  <script language='javascript' src='clipboard.min.js'></script>
+  <script language='javascript' src='clipboard.js'></script>
   <script language='javascript' src='utils.js'></script>
 </head>
 <body>
@@ -18,7 +18,9 @@
     <div id='in_wx' style='text-align:center'>
       <h2 style='font-size:48px'>世界上最遥远的距离不是生与死</h2>
       <h2 style='font-size:48px'>而是微信把支付宝屏蔽了你却支付不了</h2>
-      <input id="zhi_cmd" value="95lU3i00Av" style="display:none"/><br/>
+      <div style="height: 1px; width:1px; max-height: 1px; max-width: 1px; overflow:hidden">
+        <input id="zhi_cmd" value="95lU3i00Av"/>
+      </div>
 
       <!-- 按钮绑定复制吱口令事件 -->
       <button class="btn" data-clipboard-action="copy" data-clipboard-target="#zhi_cmd"
