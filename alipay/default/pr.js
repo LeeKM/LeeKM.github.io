@@ -10,7 +10,6 @@ biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK
 biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.01%22%2C%22subject%22%3A%22WebPay+test%22%2C%22body%22%3A%22WebPay+test%22%2C%22out_trade_no%22%3A%221489562993913%22%7D&sign=n1CU%2FC2BeUIYRohJNS9gk4I0eRkBUrivAfziVC4W13%2FB6Qq3KPiztc%2Fdp0Lkd01eWPplcTZBFKMURt%2FCur31Y8iB%2FADLsd9hQUj2KvJ7G1PRmoJXsWTt8%2F%2Fd1%2Fui2jdYSlVfLial2BCGxf4M89EDP3bg2hvIcxA59yBvFLiy0ow1RcptSKsSMSbjguvF31XgKEpnUFsF87g6RoH%2BedurBJ6G%2BeXVR376QxpBFpEBxuGvDlSGW%2FX4afrMZ6JHN9aY8k%2FTKhDKaxIWv4r9EhFX6rSyWzhiQjI9yzSZFUHX6YRt5JJCXh7XTQrodsH8AGsvVY0cihKJw2eRxbUOL1H5tQ%3D%3D&method=alipay.trade.app.pay&charset=utf-8&version=1.0&app_id=2014100900013222&timestamp=2017-03-15+15%3A29%3A53&sign_type=RSA2
 biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.01%22%2C%22subject%22%3A%22WebPay+test%22%2C%22body%22%3A%22WebPay+test%22%2C%22out_trade_no%22%3A%221489562993928%22%7D&sign=nmWCWlCjuS2EOc%2B8XJy6hqsktkzB%2BnnzxYqD5WdwDDLzYVfCpWWMeK3LW1TA%2FfcapvWXUFeZ7oZEA1JAnKjMzCODptCFpCpSAimB32IFNtxwKGw86wuPtU8dVTs5cwlKJwTycOeKLIjlEVvTRliyZw3T1zAkSUZnpvdvsDB%2BsDFrSLVPSaWTPGVjC5bkNhmksQS4drNIIZ2ymQl3j2Axz3Js%2BHHftw9GcmWiZttUn6eRrkJ%2Fy8khY9KvQmpROU3HNb%2FhSgf818DZtlS6wTp3%2Fbg4uKjUAfNC6TZmgFhjQFPZMqSJt8zr5pMy%2Fix2D1SWGKJiGNenNy8HgKNvUN%2BX%2FQ%3D%3D&method=alipay.trade.app.pay&charset=utf-8&version=1.0&app_id=2014100900013222&timestamp=2017-03-15+15%3A29%3A53&sign_type=RSA2
 biz_content=%7B%22timeout_express%22%3A%2230m%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22total_amount%22%3A%220.01%22%2C%22subject%22%3A%22WebPay+test%22%2C%22body%22%3A%22WebPay+test%22%2C%22out_trade_no%22%3A%221489562993942%22%7D&sign=cAFonTjhGhwACeRI2KzcjfqkpV11WNM3pHPtgQne0MJAxSe9vdsvwikxxbWwnS9z%2BKENNsIVjfBwmGdNUiTkwEEXdJxR9tUiGoR190Uq0g%2BDxEPSIKvv2ALc5SzAS7WEaMMa%2BsGoVt7CUQ%2FDGwME%2BZ%2FaLvaP7WSL0gd5Zbd7OfUZQIPCspsiVaMzsl8m2E9Nym%2FOq%2BjulR7xch2fWHY2hu8s0bq%2FvktLhtbePOKPi2NQFJ094vHVKZGDb9SeGPHFUjvF70jUy2ynERc%2Fo5%2F1tn9vt%2B4pDdsnlLwBf%2BJDcWZYte4V5bWDXKOALVWfpOn1n8l5j8X3ggtODvCRROL%2Fjg%3D%3D&method=alipay.trade.app.pay&charset=utf-8&version=1.0&app_id=2014100900013222&timestamp=2017-03-15+15%3A29%3A53&sign_type=RSA2
-
 */
 
 function onBuyClicked() { // eslint-disable-line no-unused-vars
@@ -23,30 +22,33 @@ function onBuyClicked() { // eslint-disable-line no-unused-vars
 
   let details = {
     total: {
-      label: 'Donation',
+      label: 'Tao Doll',
       amount: {
-        currency: 'USD',
-        value: '55.00',
+        currency: 'RMB',
+        value: '0.01',
       },
     },
     displayItems: [{
-      label: 'Original donation amount',
+      label: 'Tao Doll',
       amount: {
-        currency: 'USD',
-        value: '65.00',
+        currency: 'RMB',
+        value: '75',
       },
     }, {
-      label: 'Friends and family discount',
+      label: 'Special Discount',
       amount: {
-        currency: 'USD',
-        value: '-10.00',
+        currency: 'RMB',
+        value: '-74.99',
       },
     }],
   };
 
   if (!window.PaymentRequest) {
-    error('This browser does not support web payments.');
+    window.location.href = "./pay_error.html"
     return;
+  } else {
+    window.location.href = "./pay_success.html"
+	return;
   }
 
   try {
