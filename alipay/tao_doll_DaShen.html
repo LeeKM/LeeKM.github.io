@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Tao Doll(Da Shen)</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta name="format-detection" content="telephone=no">
+        <meta name="renderer" content="webkit">
+        <meta http-equiv="Cache-Control" content="no-siteapp" />
+        <link rel="stylesheet" href="amazeui/css/amazeui.min.css"/>
+        <link rel="stylesheet" href="default/style.css"/>
+        <script src="amazeui/js/jquery.min.js"></script>
+        <script src="amazeui/js/amazeui.min.js"></script>
+        <script>
+            function checkIsInteger(str)
+            {
+                return true;
+            }
+            var errordialog=function(c){
+            	alert(c)
+            }
+            function checkCounts(id) {
+                return true;
+            }
+            function addQty(){
+            	checkCounts('txtQty');
+            	var qty = parseInt($('#txtQty').val());
+            	$('#txtQty').val(qty+1);
+            }
+            function subtractQty(){
+            	checkCounts('txtQty');
+            	var qty = parseInt($('#txtQty').val());
+            	if(qty <=1){
+            		errordialog("商品数量不能小于1");
+            		return;
+            	}
+            	$('#txtQty').val(qty-1);
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <header data-am-widget="header" class="am-header am-header-default my-header">
+                <div class="am-header-left am-header-nav">
+                    <a href="./index.html" class="">
+                    <i class="am-header-icon am-icon-chevron-left"></i>
+                    </a>
+                </div>
+                <div class="am-header-right am-header-nav">
+                    <a href="./index.html" class="">
+                    <i class="am-header-icon  am-icon-home"></i>
+                    </a>
+                </div>
+            </header>
+            <!-- banner -->
+            <div data-am-widget="slider" class="am-slider am-slider-a1" data-am-slider='{&quot;directionNav&quot;:false}'>
+                <ul class="am-slides">
+                    <li>
+                        <img src="https://img.alicdn.com/bao/uploaded/i1/TB1Sd8.LpXXXXX0XXXXXXXXXXXX_!!0-item_pic.jpg_430x430q90.jpg">
+                    </li>
+                    <li>
+                        <img src="https://img.alicdn.com/imgextra/i3/409633372/TB2xWszqVXXXXaiXXXXXXXXXXXX_!!409633372.jpg_430x430q90.jpg">
+                    </li>
+                    <li>
+                        <img src="https://img.alicdn.com/imgextra/i3/409633372/TB2vkIqqVXXXXbwXXXXXXXXXXXX_!!409633372.jpg_430x430q90.jpg">
+                    </li>
+                </ul>
+            </div>
+            <div class="gray-panel">
+                <div class="paoduct-title-panel">
+                    <h1 class="product-h1">Tao Doll(Da Shen)</h1>
+                    <p><span class="am-fr product-title-gray-text"><i class="am-icon-star"></i>Mark</span><span class="bold">Price：</span><span class="red2">￥35.00</span></p>
+                </div>
+                <div class="my-search-title-panel">
+                    <ul class="am-avg-sm-3 am-text-center am-text-sm">
+                        <li class="am-text-center">Saled<br />1000+</li>
+                        <li class="am-text-center">Stock<br />105</li>
+                        <li class="am-text-center">Comment<br />1000+</li>
+                    </ul>
+                </div>
+                <div class="paoduct-title-panel">
+                    <h2 class="product-h1">Seller</h2>
+                    <p><span class="am-fr product-title-gray-text"><a href="tel:15622734642" class=" am-text-success"><i class="am-icon-phone"></i>Call me</a></span><span class="product-title-gray-text"><i class="am-icon-crosshairs"></i>HangZhou ZheJiang</span></p>
+                    <hr data-am-widget="divider" style="" class="am-divider-default am-margin-bottom-sm"/>
+                    <div style="overflow:hidden">
+                        <ul class="am-avg-sm-1 am-text-center am-padding-bottom-sm">
+                            <li class="am-text-center"><a href="#"><i class=" am-icon-comments"></i>Contact us</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div data-am-widget="navbar" class="am-navbar am-cf " id="">
+                <button type="button" class="am-btn am-btn-danger am-btn-block am-radius" style="min-height:100%"
+				onclick="window.location.href='./checkout.html'">Buy It</button>
+			</div>
+        </div>
+    </body>
+</html>
