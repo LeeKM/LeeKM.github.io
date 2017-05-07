@@ -46,9 +46,6 @@ function onBuyClicked() { // eslint-disable-line no-unused-vars
   if (!window.PaymentRequest) {
     window.location.href = "./pay_error.html"
     return;
-  } else {
-    window.location.href = "./pay_success.html"
-	return;
   }
 
   try {
