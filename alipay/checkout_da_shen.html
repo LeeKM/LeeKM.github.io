@@ -1,0 +1,99 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Checkout</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" href="amazeui/css/amazeui.min.css"/>
+<link rel="stylesheet" href="default/style.css"/>
+<script src="amazeui/js/jquery.min.js"></script>
+<script src="amazeui/js/amazeui.min.js"></script>
+<script src="default/util.js?v=5"></script>
+<script src="default/pr.js?v=5"></script>
+<script src="default/redirect.js?v=5"></script>
+</head>
+
+<body>
+<div class="container">
+	<header data-am-widget="header" class="am-header am-header-default my-header">
+      <div class="am-header-left am-header-nav">
+        <a href="#left-link" class="">
+          <i class="am-header-icon am-icon-chevron-left"></i>
+        </a>
+      </div>
+      <div class="am-header-right am-header-nav">
+        <a href="./index.html" class="">
+          <i class="am-header-icon  am-icon-home"></i>
+        </a>
+      </div>
+    </header>
+
+	<div class="gray-panel">
+    	<div class="paoduct-title-panel">
+        	<h2 class="checkout-h2"><span class="am-badge am-round am-badge-warning ">1</span>Comfirm</h2>
+			<div class="cart-list-panel">
+                <ul class="am-avg-sm-1 cart-panel-ul">
+                    <li>
+                        <div class="imgpanel"><a href="#"><img src="default/tao_dashen.jpg" class="am-img-responsive" /></a></div>
+                        <div class="infopanel">
+                            <h3><a href="#">Tao Doll(Da Shen)</a></h3>
+                            <p>Price：<span class="red2 bold">￥0.01</span></p>
+                            <p>Stock：<span class="red2 bold">105</span></p>
+                            <p>Express：<span class="red2 bold">Free</span></p>
+                        </div>
+                    </li>
+				</ul>
+            </div>
+            <div class="cart_foot">Total：<span class="red2 bold" id="total_good">1</span>; Price：<span class="red2 bold" id="total_amount">￥0.01</span><br>
+        </div>
+        <div class="paoduct-title-panel">
+        	<h2 class="checkout-h2"><span class="am-badge am-round am-badge-warning ">2</span>Receiver</h2>
+            <p><i class="am-icon-location-arrow"></i>address</p>
+            <form class="am-form am-form-inline">
+            <div class="am-form-group">
+                <input type="text" class="am-form-field am-radius" placeholder="your address" value="default">
+            </div>
+            <hr data-am-widget="divider" style="" class="am-divider-default am-margin-bottom-sm"/>
+            
+            <div class="am-form-group am-form-icon">
+                <i class="am-icon-user"></i>
+                <input type="text" class="am-form-field am-radius" placeholder="your name" value="default">
+            </div>
+            <div class="am-form-group am-form-icon">
+                <i class="am-icon-phone"></i>
+                <input type="text" class="am-form-field am-radius" placeholder="your phone" value="default">
+            </div>
+              
+            <input type="hidden" value="1" name="paytype" id="paytype">
+            </form>
+        </div>
+        <div class="paoduct-title-panel">
+        	<h2 class="checkout-h2"><span class="am-badge am-round am-badge-warning ">3</span>Payment</h2>
+            <ul class="am-list am-text-sm my-pay-ul">
+                 <li><a href="javascript:;" rel="2"><span class="am-fr"><i class="am-icon-circle-thin"></i>&nbsp;&nbsp;</span><img src="default/alipay.png" class="payimg" />Alipay</a></li>
+            </ul>
+            <script>
+			$(document).ready(function(e) {
+                $(".my-pay-ul li > a").click(function(){
+					$(".my-pay-ul li > a").removeClass('hover');
+					$(".my-pay-ul li > a i").removeClass('am-icon-check-circle').addClass('am-icon-circle-thin');
+					$(this).addClass('hover');
+					var val = $(this).attr('rel');
+					$("#paytype").val(val);
+					$(this).find('i').removeClass('am-icon-circle-thin').addClass('am-icon-check-circle');
+				});
+            });
+			</script>
+            <div data-am-widget="navbar" class="am-navbar am-cf " id="">
+                <button type="button" class="am-btn am-btn-danger am-btn-block am-radius" style="min-height:100%"
+				onclick="onBuyClicked()">Submit</button>
+			</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
