@@ -47,19 +47,18 @@ function ajaxPost ( url , fnSucceed , fnFail , fnLoading ) {
     ajax.send( null );
  
 }
-
-window.onload = function() {
-	ajaxPost('http://120.25.219.34:8080/HelloWord/Order', function(respText) {
-		console.log(respText);
-		orderStr = respText;
-	}, null, null)
-}
-
+ 
 function onBuyClicked() { // eslint-disable-line no-unused-vars
+
+  var order = orderStr;
+  if (window.orderInfo) {
+    order = orderInfo;
+  }
+	
   let supportedInstruments = [{
     supportedMethods: ['https://www.alipay.com/webpay'],
     data: {
-      orderInfo: orderStr
+      orderInfo: order
     },
   }];
 
